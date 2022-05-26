@@ -1,0 +1,69 @@
+/* CSS 작성 */
+header, section{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin: auto;
+}
+h2{
+    padding-right: 5px;
+    margin: auto;
+    font-size: 1.3em;
+}
+h2::after{
+    color: var(--color-gray-600);
+    content: ' | 오늘 쿠팡이 엄선한 가장 핫한 제품';
+    font-size: 0.7em;
+}
+.logo{
+    width: 176px;
+    height: 40px;
+}
+#discovery{
+    width: 1020px;
+    height: 1010px;
+}
+.discoveryList{
+    width: 1020px;
+    height: 958px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    flex-direction: row;
+}
+.items{
+    float: left;
+    margin: 10px;
+    border: 1px solid #C4C4C4;
+    list-style:none;
+    position: relative;
+}
+button{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    color: white;
+    border: 0;
+    transition: 1s;
+    transition-property: background-color;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    margin: auto;
+    bottom: 8px;
+    left: 16px;
+    z-index: 2;
+}
+.items:hover {  
+    border: 1px solid #0074E9;
+}
+.items:focus{
+    border: 1px solid #0074E9;
+}
+.items:hover > button{
+    background-color: #0074E9;
+    width: 112px;
+    height: 42px;
+}
+.items:hover > button::before{
+    content: "구매하기 ";
+    padding-right: 10px;
+}
